@@ -9,7 +9,8 @@
   "dependencies": {
     "ejs": "^2.3.1",
     "express": "~4.9.x",
-    "passport": "^0.2.2"
+    "passport": "^0.2.2",
+    "pg": "^4.4.0"
   },
   "engines": {
     "node": "0.12.2"
