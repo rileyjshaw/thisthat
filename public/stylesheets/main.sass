@@ -1,0 +1,61 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700italic)
+
+body
+	margin: 0
+	background: #eee
+	font-family: Lato, sans-serif
+
+.topnav
+	color: #eee
+	padding: 0 4%
+	background: #222
+	font-weight: bold
+	text-align: justify
+	letter-spacing: 1px
+	text-transform: uppercase
+
+	a
+		color: #eee
+		text-decoration: none
+
+	h1, nav
+		display: inline-block
+		vertical-align: middle
+
+	h1
+		margin: 0
+		font-size: 24px
+		text-align: left
+		position: relative
+		padding-top: 0.72em
+
+		a
+			color: orange !important
+
+			&::after
+				left: 0
+				color: #eee
+				width: 84px
+				overflow: hidden
+				position: absolute
+				content: 'THISTHAT!'
+
+	nav
+		font-size: 18px
+		padding-top: 1em
+
+		a
+			margin: 0 0.6em
+			white-space: nowrap
+
+			&.active
+				border-bottom: solid 3px orange
+
+			&:last-child
+				margin-right: 0
+
+	// Justify trick pushes inline-block elements to the outside
+	&::after
+		content: ''
+		width: 100%
+		display: inline-block

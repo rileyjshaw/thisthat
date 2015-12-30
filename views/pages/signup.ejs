@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<% include ../partials/header.ejs %>
+</head>
+
+<body>
+	<%- include('../partials/nav.ejs', { page: 'signup' }) %>
+
+	<h1>Sign up</h1>
+
+	<!-- Show any messages that come back with authentication -->
+	<% if (message.length > 0) { %>
+		<div><%= message %></div>
+	<% } %>
+
+	<form action="/signup" method="post">
+		<div>
+			<label>Email</label>
+			<input type="text" name="email">
+		</div>
+		<div>
+			<label>Password</label>
+			<input type="password" name="password">
+		</div>
+		<div>
+			<label>Preferred Username</label>
+			<input type="text" name="username">
+		</div>
+
+		<button type="submit">Sign up</button>
+	</form>
+
+	<p>Login or Register with <a href="/auth/facebook">Facebook</a>?</p>
+
+	<p>Already have an account? <a href="/login">Log in</a></p>
+</body>
+</html>
